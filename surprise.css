@@ -1,0 +1,236 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+body{
+
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+overflow:auto;
+
+background:linear-gradient(135deg,#ff4e8d,#ff9a9e,#fad0c4);
+
+}
+
+.container{
+
+text-align:center;
+width:700px;
+padding:40px;
+background:rgba(255,255,255,.2);
+backdrop-filter:blur(15px);
+border-radius:25px;
+box-shadow:0 0 40px rgba(255,255,255,.4);
+
+animation:zoom 1s;
+
+}
+
+@keyframes zoom{
+
+from{
+
+transform:scale(.5);
+opacity:0;
+
+}
+
+to{
+
+transform:scale(1);
+opacity:1;
+
+}
+
+}
+
+h1{
+
+font-size:55px;
+color:white;
+margin-bottom:20px;
+animation:glow 2s infinite alternate;
+
+}
+
+@keyframes glow{
+
+from{
+
+text-shadow:0 0 10px white;
+
+}
+
+to{
+
+text-shadow:0 0 30px yellow;
+
+}
+
+}
+
+.cake{
+
+font-size:140px;
+animation:bounce 2s infinite;
+
+}
+
+.flowers{
+
+font-size:70px;
+margin-top:15px;
+
+animation:shake 2s infinite;
+
+}
+
+.gift{
+
+font-size:90px;
+margin-top:20px;
+
+animation:rotate 3s infinite linear;
+
+}
+
+p{
+
+margin-top:30px;
+font-size:24px;
+line-height:40px;
+color:white;
+
+}
+
+@keyframes bounce{
+
+50%{
+
+transform:translateY(-20px);
+
+}
+
+}
+
+@keyframes shake{
+
+25%{
+
+transform:rotate(-5deg);
+
+}
+
+75%{
+
+transform:rotate(5deg);
+
+}
+
+}
+
+@keyframes rotate{
+
+100%{
+
+transform:rotate(360deg);
+
+}
+
+}
+
+.heart{
+
+position:absolute;
+font-size:35px;
+color:red;
+animation:heart 8s linear infinite;
+
+}
+
+.heart1{
+
+left:10%;
+animation-delay:0s;
+
+}
+
+.heart2{
+
+left:35%;
+animation-delay:2s;
+
+}
+
+.heart3{
+
+left:65%;
+animation-delay:4s;
+
+}
+
+.heart4{
+
+left:90%;
+animation-delay:6s;
+
+}
+
+@keyframes heart{
+
+0%{
+
+bottom:-100px;
+opacity:0;
+
+}
+
+20%{
+
+opacity:1;
+
+}
+
+100%{
+
+bottom:110%;
+opacity:0;
+transform:rotate(360deg);
+
+}
+
+}
+@media (max-width:768px){
+
+.container{
+    width:95%;
+    padding:20px;
+}
+
+h1{
+    font-size:35px;
+}
+
+p{
+    font-size:18px;
+    line-height:30px;
+}
+
+.cake{
+    font-size:80px;
+}
+
+.flowers{
+    font-size:45px;
+}
+
+.gift{
+    font-size:60px;
+}
+
+}

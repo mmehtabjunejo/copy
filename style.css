@@ -1,0 +1,320 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    overflow:auto;
+    background:linear-gradient(-45deg,#ff0080,#7928ca,#00c6ff,#ff0080);
+    background-size:400% 400%;
+    animation:bg 12s ease infinite;
+}
+
+@keyframes bg{
+
+0%{
+background-position:0% 50%;
+}
+
+50%{
+background-position:100% 50%;
+}
+
+100%{
+background-position:0% 50%;
+}
+
+}
+
+.container{
+
+text-align:center;
+padding:50px;
+width:700px;
+max-width:90%;
+background:rgba(255,255,255,.15);
+backdrop-filter:blur(15px);
+border-radius:25px;
+box-shadow:0 0 40px rgba(255,255,255,.3);
+
+animation:zoom 1.5s ease;
+
+}
+
+@keyframes zoom{
+
+from{
+
+transform:scale(.5);
+opacity:0;
+
+}
+
+to{
+
+transform:scale(1);
+opacity:1;
+
+}
+
+}
+
+.title{
+
+font-size:60px;
+color:#fff;
+animation:glow 2s infinite alternate;
+
+}
+
+@keyframes glow{
+
+from{
+
+text-shadow:0 0 10px white;
+
+}
+
+to{
+
+text-shadow:0 0 35px yellow,
+0 0 50px pink;
+
+}
+
+}
+
+.name{
+
+margin-top:20px;
+font-size:40px;
+color:#ffe600;
+animation:float 2s infinite;
+
+}
+
+@keyframes float{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-10px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+.message{
+
+margin-top:25px;
+font-size:22px;
+line-height:35px;
+color:white;
+
+}
+
+.cake{
+
+font-size:100px;
+margin-top:30px;
+
+animation:shake 1s infinite;
+
+}
+
+@keyframes shake{
+
+0%{
+
+transform:rotate(-5deg);
+
+}
+
+50%{
+
+transform:rotate(5deg);
+
+}
+
+100%{
+
+transform:rotate(-5deg);
+
+}
+
+}
+
+.btn{
+
+margin-top:30px;
+padding:15px 40px;
+font-size:20px;
+border:none;
+border-radius:50px;
+background:#fff;
+color:#ff0080;
+cursor:pointer;
+transition:.4s;
+
+}
+
+.btn:hover{
+
+background:#ffe600;
+transform:scale(1.1);
+
+}
+
+.balloon{
+
+position:absolute;
+bottom:-150px;
+width:70px;
+height:90px;
+border-radius:50%;
+animation:fly 10s linear infinite;
+
+}
+
+.balloon::after{
+
+content:"";
+position:absolute;
+left:34px;
+top:90px;
+width:2px;
+height:120px;
+background:white;
+
+}
+
+.balloon1{
+
+background:#ff4d6d;
+left:10%;
+animation-delay:0s;
+
+}
+
+.balloon2{
+
+background:#00d4ff;
+left:30%;
+animation-delay:2s;
+
+}
+
+.balloon3{
+
+background:#ffe600;
+left:70%;
+animation-delay:4s;
+
+}
+
+.balloon4{
+
+background:#7dff6c;
+left:90%;
+animation-delay:6s;
+
+}
+
+@keyframes fly{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+100%{
+
+transform:translateY(-130vh);
+
+}
+
+}
+
+.stars{
+
+position:absolute;
+width:100%;
+height:100%;
+background-image:
+radial-gradient(white 2px, transparent 2px);
+
+background-size:50px 50px;
+opacity:.4;
+animation:move 30s linear infinite;
+
+}
+
+@keyframes move{
+
+from{
+
+transform:translateY(0);
+
+}
+
+to{
+
+transform:translateY(-300px);
+
+}
+
+}
+@media (max-width:768px){
+
+.container{
+    width:95%;
+    padding:20px;
+}
+
+.title{
+    font-size:35px;
+}
+
+.name{
+    font-size:28px;
+}
+
+.message{
+    font-size:18px;
+    line-height:30px;
+}
+
+.cake{
+    font-size:80px;
+}
+
+.btn{
+    width:100%;
+    padding:15px;
+    font-size:18px;
+}
+
+.balloon{
+    width:45px;
+    height:60px;
+}
+
+}
